@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Resume Builder</h1>
+    <form action="/preview" method="POST">
+      <label>Name:<input type="text" name="name" required></label>
+      <label>Email:<input type="email" name="email" required></label>
+      <label>Phone:<input type="text" name="phone" required></label>
+      <label>Summary:<textarea name="summary" required></textarea></label>
+      <label>Education:<textarea name="education" required></textarea></label>
+      <label>Experience:<textarea name="experience" required></textarea></label>
+      <label>Skills (comma separated):<input type="text" name="skills" required></label>
+      <button type="submit">Preview Resume</button>
+    </form>
+  </div>
+</body>
+</html>
